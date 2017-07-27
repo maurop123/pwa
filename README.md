@@ -1,4 +1,4 @@
-# vue-pwa-boilerplate
+# vuetify-pwa-boilerplate
 
 > A full-featured [PWA](https://developers.google.com/web/progressive-web-apps/) template with webpack, hot-reload, lint-on-save, unit testing & css extraction.
 
