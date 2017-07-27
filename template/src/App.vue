@@ -29,10 +29,6 @@
 </template>
 
 <script>
-{{#unless router}}
-import Hello from './components/Hello'{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
-
-{{/unless}}
 export default {
   name: 'app',
   data: () => ({
@@ -54,5 +50,10 @@ body {
 .navigation-drawer {
   overflow: hidden;
   z-index: 0;
+}
+
+// overridding vuetify
+.toolbar__content>:not(.btn):not(.toolbar__title):first-child, .toolbar__extension>:not(.btn):not(.toolbar__title):first-child {
+  margin-left: 0;
 }
 </style>

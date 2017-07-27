@@ -6,14 +6,19 @@ import Vue from 'vue'{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
 import Vuetify from 'vuetify'
 Vue.use(Vuetify)
 import App from './App'{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
+{{#database}}
+import database from './database'{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
+{{/database}}
 {{#router}}
-import router from './router'{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
+import Router from './router'{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
+const router = Router({Vue})
 {{/router}}
-
-Vue.config.productionTip = false{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
-
+{{#store}}
 import Store from './store'
 const store = Store({Vue})
+{{/store}}
+
+Vue.config.productionTip = false{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
 
 /* eslint-disable no-new */
 new Vue({
