@@ -1,17 +1,31 @@
 <template>
-  <div id="app">
-    <header>
-      <span>Vue.js PWA</span>
-    </header>
-    <main>
-      <img src="./assets/logo.png" alt="Vue.js PWA">
-      {{#router}}
-      <router-view></router-view>
-      {{else}}
-      <hello></hello>
-      {{/router}}
-    </main>
-  </div>
+  <v-app>
+    <v-container fluid>
+      <v-toolbar class="white">
+        <v-navigation-drawer
+          persistent
+          clipped
+          floating
+          hide-overlay
+          height="100%"
+          v-model="drawer">
+          <v-list>
+            <v-list-tile>
+              <v-list-tile-title>
+                menu
+              </v-list-tile-title>
+            </v-list-tile>
+          </v-list>
+        </v-navigation-drawer>
+        <v-toolbar-side-icon @click.native.stop="drawer = !drawer" />
+        <v-toolbar-title>
+          {{ name }}
+        </v-toolbar-title>
+        <v-spacer />
+      </v-toolbar>
+      <router-view />
+    </v-container>
+  </v-app>
 </template>
 
 <script>
@@ -21,9 +35,9 @@ import Hello from './components/Hello'{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
 {{/unless}}
 export default {
   name: 'app'{{#router}}{{#if_eq lintConfig "airbnb"}},{{/if_eq}}{{else}},
-  components: {
-    Hello{{#if_eq lintConfig "airbnb"}},{{/if_eq}}
-  }{{#if_eq lintConfig "airbnb"}},{{/if_eq}}{{/router}}
+  data: () => ({
+    drawer: false,
+  })
 }{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
 </script>
 
@@ -31,35 +45,14 @@ export default {
 body {
   margin: 0;
 }
-
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  color: #2c3e50;
+.container {
+  padding: 0;
 }
-
-main {
-  text-align: center;
-  margin-top: 40px;
+.toolbar {
+  margin-bottom: 15px;
 }
-
-header {
-  margin: 0;
-  height: 56px;
-  padding: 0 16px 0 24px;
-  background-color: #35495E;
-  color: #ffffff;
-}
-
-header span {
-  display: block;
-  position: relative;
-  font-size: 20px;
-  line-height: 1;
-  letter-spacing: .02em;
-  font-weight: 400;
-  box-sizing: border-box;
-  padding-top: 16px;
+.navigation-drawer {
+  overflow: hidden;
+  z-index: 0;
 }
 </style>

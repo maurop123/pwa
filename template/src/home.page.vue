@@ -3,7 +3,7 @@
     <v-flex xs12 sm8 offset-sm2 md6 offset-md3>
       <v-card>
         <v-card-title>
-          {{msg}
+          {{msg}}
         </v-card-title>
       </v-card>
     </v-flex>
