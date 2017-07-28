@@ -1,5 +1,5 @@
 # maurop123/pwa
-## PWA - Vuetify - Firebase - Vue Router - Vuex
+## PWA - Vuetify - Firebase
 
 > A full-featured [PWA](https://developers.google.com/web/progressive-web-apps/) template with webpack, hot-reload, lint-on-save, unit testing & css extraction.
 
