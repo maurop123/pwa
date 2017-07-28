@@ -96,7 +96,9 @@ module.exports = {
     "test/e2e/**/*": "e2e",
     "src/router.js": "router",
     "src/store.js": "store",
-    "src/database.js": "firebase"
+    "src/auth.store.js": "store && firebase",
+    "src/database.js": "firebase",
+    "src/login.page.js": "firebase"
   },
   "completeMessage": "To get started:\n\n  {{^inPlace}}cd {{destDirName}}\n  {{/inPlace}}npm install\n  npm run dev\n\nDocumentation can be found at https://vuejs-templates.github.io/webpack"
 };

@@ -36,6 +36,10 @@ $ npm install
 $ npm run dev
 ```
 
+## Generate your own icons
+
+Go to [realfavicongenerator.net](http://realfavicongenerator.net/)
+
 ## What's Included
 
 * Service Worker precaching of application shell + static assets (prod)

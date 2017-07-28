@@ -1,11 +1,9 @@
 import firebase from 'firebase'
 
-const config = {
-  apiKey: "",
-  authDomain: "",
-  databaseURL: "", 
-}
-
-const firebaseApp = firebase.initializeApp(config)
+const firebaseApp = firebase.initializeApp({
+  apiKey: "AIzaSyAyqHeGbVxYnXNKrAbtkJ8tkopm76W0kvw",
+  authDomain: "mauro-made-it.firebaseapp.com",
+  databaseURL: "https://mauro-made-it.firebaseio.com",
+})
 export const db = firebaseApp.database()
 export const Auth = firebase.auth()
