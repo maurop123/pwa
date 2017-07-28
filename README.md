@@ -1,4 +1,4 @@
-# vue-pwa-boilerplate
+# vuetify-pwa-boilerplate
 
 > A full-featured [PWA](https://developers.google.com/web/progressive-web-apps/) template with webpack, hot-reload, lint-on-save, unit testing & css extraction.
 
@@ -14,13 +14,26 @@ This is a project template for [vue-cli](https://github.com/vuejs/vue-cli). **It
 
 ``` bash
 $ npm install -g vue-cli
-$ vue init pwa my-project
+$ vue init maurop123/pwa my-project
 $ cd my-project
 $ npm install
 $ npm run dev
 ```
 
 If port 8080 is already in use on your machine you must change the port number in `/config/index.js`. Otherwise `npm run dev` will fail.
+
+## Install with npx - skip the global install
+
+If you have npm > 5.2, then you can use `npx` to run the `vue-cli` package without having to install it globally. [Read more](https://medium.com/@maybekatz/introducing-npx-an-npm-package-runner-55f7d4bd282b)
+
+Here's the alternate install...
+
+``` bash
+$ npx vue init maurop123/pwa my-project
+$ cd my-project
+$ npm install
+$ npm run dev
+```
 
 ## What's Included
 
@@ -62,4 +75,20 @@ You can fork this repo to create your own boilerplate, and use it with `vue-cli`
 
 ``` bash
 vue init username/repo my-project
+```
+
+### Stay up to date
+
+After you fork this repo, you can rebase new changes as they come.
+
+From inside your repo
+``` bash
+$ git remote add upstream https://github.com/maurop123/pwa.git
+$ git fetch upstream
+```
+
+Then if you fetched anything new, try rebase.
+
+``` bash
+$ git rebase upstream/master
 ```

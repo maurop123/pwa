@@ -52,8 +52,8 @@ body {
   z-index: 0;
 }
 
-// overridding vuetify
-.toolbar__content>:not(.btn):not(.toolbar__title):first-child, .toolbar__extension>:not(.btn):not(.toolbar__title):first-child {
-  margin-left: 0;
+/* overridding vuetify */
+.toolbar__content>:not(.btn):not(.toolbar__title):first-child {
+  margin-left: 0 !important;
 }
 </style>
