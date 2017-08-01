@@ -71,6 +71,7 @@ export default {
 </script>
 
 <style>
+/* overridding vuetify */
 .toolbar {
   margin-bottom: 15px;
 }
@@ -78,8 +79,7 @@ export default {
   overflow: hidden;
   z-index: 0;
 }
-/* overridding vuetify */
 .toolbar__content>:not(.btn):not(.toolbar__title):first-child {
-  margin-left: 0 !important;
+  margin-left: 0;
 }
 </style>

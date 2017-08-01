@@ -47,4 +47,9 @@ body {
 .container {
   padding: 0;
 }
+
+/* overridding vuetify */
+.layout {
+  margin: 0;
+}
 </style>
