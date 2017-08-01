@@ -70,7 +70,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style>
 .toolbar {
   margin-bottom: 15px;
 }
