@@ -39,7 +39,9 @@ export default {
 }{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
 </script>
 
-<style>
+<style lang="scss">
+@import '../node_modules/vuetify/dist/vuetify.min.css';
+
 body {
   margin: 0;
 }
