@@ -10,18 +10,20 @@ const state = {
 const mutations = () => ({
   updateMessage(state, payload) {
     state.message = payload
-  },
+  },{{#firebase}}
+  ...firebaseMutations,
+  {{/firebase}}
 })
 
 const actions = () => ({
-  hydrate: firebaseAction(({state, getters, commit, bindFirebaseRef, unbindFirebaseRef}) => {
+  {{#firebase}}hydrate: firebaseAction(({state, getters, commit, bindFirebaseRef, unbindFirebaseRef}) => {
     // if (getters.isLoggedIn) {
       // bindFirebaseRef('savedTickets', db.child('tickets').orderByChild('user/id').equalTo(state.auth.user.uid))
     // } else if (state.savedTickets !== null) {
       // unbindFirebaseRef('savedTickets')
       // commit('savedTickets', [])
     // }
-  }),
+  }),{{/firebase}}
 })
 
 {{#firebase}}
@@ -39,7 +41,7 @@ export default function({
   Vue.use(Vuex)
 
   return new Vuex.Store({
-    modules: modules({ Auth }),
+    {{#firebase}}modules: modules({ Auth }),{{/firebase}}
     state,
     mutations: mutations(),
     actions: actions(),
